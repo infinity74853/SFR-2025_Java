@@ -1,4 +1,4 @@
-package main.java.module3;
+package module3;
 
 public class task3 {
   public static void main(String[] args) {
