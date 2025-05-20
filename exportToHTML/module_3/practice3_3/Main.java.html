@@ -46,92 +46,98 @@ Main.java</font>
 <a name="l25"><span class="ln">25   </span></a> <span class="s0">void delete(String data): удаляет данные из базы данных.</span>
 <a name="l26"><span class="ln">26   </span></a>
 <a name="l27"><span class="ln">27   </span></a> <span class="s0">Задача 4.</span>
-<a name="l28"><span class="ln">28   </span></a> <span class="s0">Создайте абстрактный класс Animal, который имеет абстрактные методы makeSound() и move(). Реализуйте этот класс в дочерних классах Dog, Cat и Bird, где каждый класс реализует свои звук и способ передвижения. Создайте метод Main и в нем проверьте работу классов.</span>
-<a name="l29"><span class="ln">29   </span></a>
-<a name="l30"><span class="ln">30   </span></a> <span class="s0">Задача 5.</span>
-<a name="l31"><span class="ln">31   </span></a> <span class="s0">a)	Создайте интерфейс Shape, который содержит следующие методы:</span>
-<a name="l32"><span class="ln">32   </span></a> <span class="s0">double calculateArea(): возвращает площадь фигуры.</span>
-<a name="l33"><span class="ln">33   </span></a> <span class="s0">double calculatePerimeter(): возвращает периметр фигуры.</span>
-<a name="l34"><span class="ln">34   </span></a>
-<a name="l35"><span class="ln">35   </span></a> <span class="s0">b)	Создайте классы, реализующие интерфейс Shape:</span>
-<a name="l36"><span class="ln">36   </span></a> <span class="s0">Circle:</span>
-<a name="l37"><span class="ln">37   </span></a> <span class="s0">Поле radius (тип double): радиус окружности.</span>
-<a name="l38"><span class="ln">38   </span></a> <span class="s0">Конструктор, принимающий радиус и инициализирующий поле radius.</span>
-<a name="l39"><span class="ln">39   </span></a> <span class="s0">Переопределенные методы calculateArea() и calculatePerimeter() для окружности.</span>
-<a name="l40"><span class="ln">40   </span></a>
-<a name="l41"><span class="ln">41   </span></a> <span class="s0">Rectangle:</span>
-<a name="l42"><span class="ln">42   </span></a> <span class="s0">Поле length (тип double): длина прямоугольника и  поле width (тип double): ширина прямоугольника.</span>
-<a name="l43"><span class="ln">43   </span></a> <span class="s0">Конструктор, принимающий длину и ширину и инициализирующий соответствующие поля.</span>
-<a name="l44"><span class="ln">44   </span></a> <span class="s0">Переопределенные методы calculateArea() и calculatePerimeter() для прямоугольника.</span>
-<a name="l45"><span class="ln">45   </span></a>
-<a name="l46"><span class="ln">46   </span></a> <span class="s0">c)	Определите интерфейс Resizable, содержащий метод resize(int percent). Circle и Rectangle должны реализовать интерфейс Resizable. Метод resize() должен изменять размер круга или прямоугольника на указанный процент. Создайте метод Main и в нем проверьте работу классов.</span>
-<a name="l47"><span class="ln">47   </span></a>
-<a name="l48"><span class="ln">48   </span></a> <span class="s0">Задача 6.</span>
-<a name="l49"><span class="ln">49   </span></a> <span class="s0">Создайте интерфейс Logger, содержащий метод log(String message). Реализуйте интерфейс в классах ConsoleLogger и FileLogger, которые выводят сообщение в консоль и записывают в файл соответственно. Создайте класс Application, который использует объекты ConsoleLogger и FileLogger для логирования сообщений. Создайте метод Main и в нем проверьте работу классов.</span>
-<a name="l50"><span class="ln">50   </span></a>
-<a name="l51"><span class="ln">51   </span></a> <span class="s0">Задача 7.</span>
-<a name="l52"><span class="ln">52   </span></a> <span class="s0">Создать программу для управления транспортными средствами с использованием Enum класса для типов транспорта.</span>
-<a name="l53"><span class="ln">53   </span></a> <span class="s0">7.	Создание класса Vehicle с полями vehicleId, transportType и методами setTransportType и getTransportType.</span>
-<a name="l54"><span class="ln">54   </span></a> <span class="s0">8.	Создание метода isPublicTransport, который возвращает true, если тип транспорта является общественным (BUS, TRAIN), и false в противном случае.</span>
-<a name="l55"><span class="ln">55   </span></a> <span class="s0">9.	Инициализация нескольких транспортных средств с разными типами.</span>
-<a name="l56"><span class="ln">56   </span></a> <span class="s0">10.	Вывод на экран информации о транспортных средствах и их типах.</span>
-<a name="l57"><span class="ln">57   </span></a> <span class="s0">11.	Вызов метода isPublicTransport для каждого транспортного средства и вывод результата.</span>
-<a name="l58"><span class="ln">58   </span></a> <span class="s0">12.	Повторный вывод на экран информации о транспортных средствах, чтобы убедиться, что типы транспорта корректно обработаны.</span>
-<a name="l59"><span class="ln">59   </span></a>
-<a name="l60"><span class="ln">60   </span></a> <span class="s0">Задача 8.</span>
-<a name="l61"><span class="ln">61   </span></a> <span class="s0">Представьте, что вы разрабатываете систему управления умным домом. Вам необходимо создать иерархию классов для устройств в доме (например, светильники, кондиционеры, дверные замки) с возможностью управления ими через центральный контроллер.</span>
-<a name="l62"><span class="ln">62   </span></a> <span class="s0">Создание абстрактного класса Device:</span>
-<a name="l63"><span class="ln">63   </span></a> <span class="s0">•	Создайте абстрактный класс Device, который содержит абстрактные методы turnOn(), turnOff() и метод getStatus().</span>
-<a name="l64"><span class="ln">64   </span></a> <span class="s0">•	Реализуйте в абстрактном классе основные свойства устройства, которые могут быть общими для всех устройств в умном доме.</span>
-<a name="l65"><span class="ln">65   </span></a> <span class="s0">Определение интерфейса Controllable:</span>
-<a name="l66"><span class="ln">66   </span></a> <span class="s0">•	Определите интерфейс Controllable, содержащий методы controlDevice() для управления устройствами и getStatus() для получения статуса устройства.</span>
-<a name="l67"><span class="ln">67   </span></a> <span class="s0">Создание классов устройств:</span>
-<a name="l68"><span class="ln">68   </span></a> <span class="s0">•	Создайте классы Light, AirConditioner и DoorLock, которые наследуются от Device и реализуют интерфейс Controllable.</span>
-<a name="l69"><span class="ln">69   </span></a> <span class="s0">•	Для каждого класса устройства определите уникальные свойства и реализацию методов turnOn(), turnOff() и controlDevice() в соответствии с их функциональностью.</span>
-<a name="l70"><span class="ln">70   </span></a> <span class="s0">Создание класса SmartHomeControl:</span>
-<a name="l71"><span class="ln">71   </span></a> <span class="s0">•	Создайте класс SmartHomeControl, который содержит список управляемых устройств (например, в виде списка объектов Device или Controllable).</span>
-<a name="l72"><span class="ln">72   </span></a> <span class="s0">•	Реализуйте методы для управления устройствами, такие как turnOnAllDevices(), turnOffAllDevices(), controlDeviceById(), которые будут использовать полиморфизм для работы с различными типами устройств.</span>
-<a name="l73"><span class="ln">73   </span></a> <span class="s0">Пример использования системы управления умным домом:</span>
-<a name="l74"><span class="ln">74   </span></a> <span class="s0">•	Создайте экземпляры классов устройств (например, светильник, кондиционер, замок) и добавьте их в объект SmartHomeControl.</span>
-<a name="l75"><span class="ln">75   </span></a> <span class="s0">Вызовите методы управления устройствами (например, включение/выключение устройств, управление состоянием) с использованием методов класса SmartHomeControl.</span>
-<a name="l76"><span class="ln">76   </span></a>
-<a name="l77"><span class="ln">77   </span></a> <span class="s0">*/</span>
-<a name="l78"><span class="ln">78   </span></a>
-<a name="l79"><span class="ln">79   </span></a>
-<a name="l80"><span class="ln">80   </span></a><span class="s2">package </span><span class="s1">module_3</span><span class="s3">.</span><span class="s1">practice3_3</span><span class="s3">;</span>
-<a name="l81"><span class="ln">81   </span></a>
-<a name="l82"><span class="ln">82   </span></a><span class="s2">public class </span><span class="s1">Main </span><span class="s3">{</span>
-<a name="l83"><span class="ln">83   </span></a>  <span class="s2">public static void </span><span class="s1">main</span><span class="s3">(</span><span class="s1">String</span><span class="s3">[] </span><span class="s1">args</span><span class="s3">) {</span>
-<a name="l84"><span class="ln">84   </span></a>    <span class="s4">// Задача 1</span>
-<a name="l85"><span class="ln">85   </span></a>    <span class="s1">Integer a </span><span class="s3">= </span><span class="s5">15</span><span class="s3">, </span><span class="s1">b </span><span class="s3">= </span><span class="s5">5</span><span class="s3">;</span>
-<a name="l86"><span class="ln">86   </span></a>    <span class="s1">Double x </span><span class="s3">= </span><span class="s5">10.0</span><span class="s3">, </span><span class="s1">y </span><span class="s3">= </span><span class="s5">2.0</span><span class="s3">;</span>
-<a name="l87"><span class="ln">87   </span></a>    <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s6">&quot;Разница: &quot; </span><span class="s3">+ <a href="WrapperOperations.java.html">WrapperOperations</a>.</span><span class="s1">sumIntegers</span><span class="s3">(</span><span class="s1">a</span><span class="s3">, </span><span class="s1">b</span><span class="s3">));</span>
-<a name="l88"><span class="ln">88   </span></a>    <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s6">&quot;Деление: &quot; </span><span class="s3">+ <a href="WrapperOperations.java.html">WrapperOperations</a>.</span><span class="s1">multiplyDoubles</span><span class="s3">(</span><span class="s1">x</span><span class="s3">, </span><span class="s1">y</span><span class="s3">));</span>
-<a name="l89"><span class="ln">89   </span></a>    <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s6">&quot;Бинарный вид: &quot; </span><span class="s3">+ <a href="WrapperOperations.java.html">WrapperOperations</a>.</span><span class="s1">convertToBinaryString</span><span class="s3">(</span><span class="s5">42</span><span class="s3">));</span>
-<a name="l90"><span class="ln">90   </span></a>
-<a name="l91"><span class="ln">91   </span></a>    <span class="s4">// Задача 2</span>
-<a name="l92"><span class="ln">92   </span></a>    <a href="Vehicle.java.html">Vehicle</a> <span class="s1">bus </span><span class="s3">= </span><span class="s2">new <a href="Vehicle.java.html">Vehicle</a></span><span class="s3">();</span>
-<a name="l93"><span class="ln">93   </span></a>    <span class="s1">bus</span><span class="s3">.</span><span class="s1">setTransportType</span><span class="s3">(<a href="TransportType.java.html">TransportType</a>.</span><span class="s1">BUS</span><span class="s3">);</span>
-<a name="l94"><span class="ln">94   </span></a>    <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s6">&quot;Автобус общественный? &quot; </span><span class="s3">+ </span><span class="s1">bus</span><span class="s3">.</span><span class="s1">isPublicTransport</span><span class="s3">());</span>
-<a name="l95"><span class="ln">95   </span></a>
-<a name="l96"><span class="ln">96   </span></a>    <span class="s4">// Задача 4</span>
-<a name="l97"><span class="ln">97   </span></a>    <a href="Animal.java.html">Animal</a> <span class="s1">dog </span><span class="s3">= </span><span class="s2">new <a href="Dog.java.html">Dog</a></span><span class="s3">();</span>
-<a name="l98"><span class="ln">98   </span></a>    <span class="s1">dog</span><span class="s3">.</span><span class="s1">makeSound</span><span class="s3">();</span>
-<a name="l99"><span class="ln">99   </span></a>
-<a name="l100"><span class="ln">100  </span></a>    <span class="s4">// Задача 5</span>
-<a name="l101"><span class="ln">101  </span></a>    <a href="Circle.java.html">Circle</a> <span class="s1">circle </span><span class="s3">= </span><span class="s2">new <a href="Circle.java.html">Circle</a></span><span class="s3">(</span><span class="s5">5</span><span class="s3">);</span>
-<a name="l102"><span class="ln">102  </span></a>    <span class="s1">circle</span><span class="s3">.</span><span class="s1">resize</span><span class="s3">(</span><span class="s5">10</span><span class="s3">);</span>
-<a name="l103"><span class="ln">103  </span></a>    <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s6">&quot;Площадь круга: &quot; </span><span class="s3">+ </span><span class="s1">circle</span><span class="s3">.</span><span class="s1">calculateArea</span><span class="s3">());</span>
-<a name="l104"><span class="ln">104  </span></a>
-<a name="l105"><span class="ln">105  </span></a>    <span class="s4">// Задача 6</span>
-<a name="l106"><span class="ln">106  </span></a>    <a href="Logger.java.html">Logger</a> <span class="s1">consoleLogger </span><span class="s3">= </span><span class="s2">new <a href="ConsoleLogger.java.html">ConsoleLogger</a></span><span class="s3">();</span>
-<a name="l107"><span class="ln">107  </span></a>    <span class="s1">consoleLogger</span><span class="s3">.</span><span class="s1">log</span><span class="s3">(</span><span class="s6">&quot;Тестовое сообщение&quot;</span><span class="s3">);</span>
-<a name="l108"><span class="ln">108  </span></a>
-<a name="l109"><span class="ln">109  </span></a>    <span class="s4">// Задача 8</span>
-<a name="l110"><span class="ln">110  </span></a>    <a href="Light.java.html">Light</a> <span class="s1">livingRoomLight </span><span class="s3">= </span><span class="s2">new <a href="Light.java.html">Light</a></span><span class="s3">();</span>
-<a name="l111"><span class="ln">111  </span></a>    <span class="s1">livingRoomLight</span><span class="s3">.</span><span class="s1">turnOn</span><span class="s3">();</span>
-<a name="l112"><span class="ln">112  </span></a>  <span class="s3">}</span>
-<a name="l113"><span class="ln">113  </span></a><span class="s3">}</span>
-<a name="l114"><span class="ln">114  </span></a></pre>
+<a name="l28"><span class="ln">28   </span></a> <span class="s0">Создайте абстрактный класс Animal, который имеет абстрактные методы makeSound() и move().</span>
+<a name="l29"><span class="ln">29   </span></a> <span class="s0">Реализуйте этот класс в дочерних классах Dog, Cat и Bird, где каждый класс реализует свои звук и способ передвижения. Создайте метод Main и в нем проверьте работу классов.</span>
+<a name="l30"><span class="ln">30   </span></a>
+<a name="l31"><span class="ln">31   </span></a> <span class="s0">Задача 5.</span>
+<a name="l32"><span class="ln">32   </span></a> <span class="s0">a)	Создайте интерфейс Shape, который содержит следующие методы:</span>
+<a name="l33"><span class="ln">33   </span></a> <span class="s0">double calculateArea(): возвращает площадь фигуры.</span>
+<a name="l34"><span class="ln">34   </span></a> <span class="s0">double calculatePerimeter(): возвращает периметр фигуры.</span>
+<a name="l35"><span class="ln">35   </span></a>
+<a name="l36"><span class="ln">36   </span></a> <span class="s0">b)	Создайте классы, реализующие интерфейс Shape:</span>
+<a name="l37"><span class="ln">37   </span></a> <span class="s0">Circle:</span>
+<a name="l38"><span class="ln">38   </span></a> <span class="s0">Поле radius (тип double): радиус окружности.</span>
+<a name="l39"><span class="ln">39   </span></a> <span class="s0">Конструктор, принимающий радиус и инициализирующий поле radius.</span>
+<a name="l40"><span class="ln">40   </span></a> <span class="s0">Переопределенные методы calculateArea() и calculatePerimeter() для окружности.</span>
+<a name="l41"><span class="ln">41   </span></a>
+<a name="l42"><span class="ln">42   </span></a> <span class="s0">Rectangle:</span>
+<a name="l43"><span class="ln">43   </span></a> <span class="s0">Поле length (тип double): длина прямоугольника и  поле width (тип double): ширина прямоугольника.</span>
+<a name="l44"><span class="ln">44   </span></a> <span class="s0">Конструктор, принимающий длину и ширину и инициализирующий соответствующие поля.</span>
+<a name="l45"><span class="ln">45   </span></a> <span class="s0">Переопределенные методы calculateArea() и calculatePerimeter() для прямоугольника.</span>
+<a name="l46"><span class="ln">46   </span></a>
+<a name="l47"><span class="ln">47   </span></a> <span class="s0">c)	Определите интерфейс Resizable, содержащий метод resize(int percent). Circle и Rectangle должны реализовать интерфейс Resizable.</span>
+<a name="l48"><span class="ln">48   </span></a> <span class="s0">Метод resize() должен изменять размер круга или прямоугольника на указанный процент. Создайте метод Main и в нем проверьте работу классов.</span>
+<a name="l49"><span class="ln">49   </span></a>
+<a name="l50"><span class="ln">50   </span></a> <span class="s0">Задача 6.</span>
+<a name="l51"><span class="ln">51   </span></a> <span class="s0">Создайте интерфейс Logger, содержащий метод log(String message). Реализуйте интерфейс в классах ConsoleLogger и FileLogger,</span>
+<a name="l52"><span class="ln">52   </span></a> <span class="s0">которые выводят сообщение в консоль и записывают в файл соответственно. Создайте класс Application, который использует объекты</span>
+<a name="l53"><span class="ln">53   </span></a> <span class="s0">ConsoleLogger и FileLogger для логирования сообщений. Создайте метод Main и в нем проверьте работу классов.</span>
+<a name="l54"><span class="ln">54   </span></a>
+<a name="l55"><span class="ln">55   </span></a> <span class="s0">Задача 7.</span>
+<a name="l56"><span class="ln">56   </span></a> <span class="s0">Создать программу для управления транспортными средствами с использованием Enum класса для типов транспорта.</span>
+<a name="l57"><span class="ln">57   </span></a> <span class="s0">7.	Создание класса Vehicle с полями vehicleId, transportType и методами setTransportType и getTransportType.</span>
+<a name="l58"><span class="ln">58   </span></a> <span class="s0">8.	Создание метода isPublicTransport, который возвращает true, если тип транспорта является общественным (BUS, TRAIN), и false в противном случае.</span>
+<a name="l59"><span class="ln">59   </span></a> <span class="s0">9.	Инициализация нескольких транспортных средств с разными типами.</span>
+<a name="l60"><span class="ln">60   </span></a> <span class="s0">10.	Вывод на экран информации о транспортных средствах и их типах.</span>
+<a name="l61"><span class="ln">61   </span></a> <span class="s0">11.	Вызов метода isPublicTransport для каждого транспортного средства и вывод результата.</span>
+<a name="l62"><span class="ln">62   </span></a> <span class="s0">12.	Повторный вывод на экран информации о транспортных средствах, чтобы убедиться, что типы транспорта корректно обработаны.</span>
+<a name="l63"><span class="ln">63   </span></a>
+<a name="l64"><span class="ln">64   </span></a> <span class="s0">Задача 8.</span>
+<a name="l65"><span class="ln">65   </span></a> <span class="s0">Представьте, что вы разрабатываете систему управления умным домом. Вам необходимо создать иерархию классов для устройств</span>
+<a name="l66"><span class="ln">66   </span></a> <span class="s0">в доме (например, светильники, кондиционеры, дверные замки) с возможностью управления ими через центральный контроллер.</span>
+<a name="l67"><span class="ln">67   </span></a> <span class="s0">Создание абстрактного класса Device:</span>
+<a name="l68"><span class="ln">68   </span></a> <span class="s0">•	Создайте абстрактный класс Device, который содержит абстрактные методы turnOn(), turnOff() и метод getStatus().</span>
+<a name="l69"><span class="ln">69   </span></a> <span class="s0">•	Реализуйте в абстрактном классе основные свойства устройства, которые могут быть общими для всех устройств в умном доме.</span>
+<a name="l70"><span class="ln">70   </span></a> <span class="s0">Определение интерфейса Controllable:</span>
+<a name="l71"><span class="ln">71   </span></a> <span class="s0">•	Определите интерфейс Controllable, содержащий методы controlDevice() для управления устройствами и getStatus() для получения статуса устройства.</span>
+<a name="l72"><span class="ln">72   </span></a> <span class="s0">Создание классов устройств:</span>
+<a name="l73"><span class="ln">73   </span></a> <span class="s0">•	Создайте классы Light, AirConditioner и DoorLock, которые наследуются от Device и реализуют интерфейс Controllable.</span>
+<a name="l74"><span class="ln">74   </span></a> <span class="s0">•	Для каждого класса устройства определите уникальные свойства и реализацию методов turnOn(), turnOff() и controlDevice() в соответствии с их функциональностью.</span>
+<a name="l75"><span class="ln">75   </span></a> <span class="s0">Создание класса SmartHomeControl:</span>
+<a name="l76"><span class="ln">76   </span></a> <span class="s0">•	Создайте класс SmartHomeControl, который содержит список управляемых устройств (например, в виде списка объектов Device или Controllable).</span>
+<a name="l77"><span class="ln">77   </span></a> <span class="s0">•	Реализуйте методы для управления устройствами, такие как turnOnAllDevices(), turnOffAllDevices(), controlDeviceById(), которые будут использовать</span>
+<a name="l78"><span class="ln">78   </span></a> <span class="s0">полиморфизм для работы с различными типами устройств.</span>
+<a name="l79"><span class="ln">79   </span></a> <span class="s0">Пример использования системы управления умным домом:</span>
+<a name="l80"><span class="ln">80   </span></a> <span class="s0">•	Создайте экземпляры классов устройств (например, светильник, кондиционер, замок) и добавьте их в объект SmartHomeControl.</span>
+<a name="l81"><span class="ln">81   </span></a> <span class="s0">Вызовите методы управления устройствами (например, включение/выключение устройств, управление состоянием) с использованием методов класса SmartHomeControl.</span>
+<a name="l82"><span class="ln">82   </span></a>
+<a name="l83"><span class="ln">83   </span></a> <span class="s0">*/</span>
+<a name="l84"><span class="ln">84   </span></a>
+<a name="l85"><span class="ln">85   </span></a>
+<a name="l86"><span class="ln">86   </span></a><span class="s2">package </span><span class="s1">module_3</span><span class="s3">.</span><span class="s1">practice3_3</span><span class="s3">;</span>
+<a name="l87"><span class="ln">87   </span></a>
+<a name="l88"><span class="ln">88   </span></a><span class="s2">public class </span><span class="s1">Main </span><span class="s3">{</span>
+<a name="l89"><span class="ln">89   </span></a>  <span class="s2">public static void </span><span class="s1">main</span><span class="s3">(</span><span class="s1">String</span><span class="s3">[] </span><span class="s1">args</span><span class="s3">) {</span>
+<a name="l90"><span class="ln">90   </span></a>    <span class="s4">// Задача 1</span>
+<a name="l91"><span class="ln">91   </span></a>    <span class="s1">Integer a </span><span class="s3">= </span><span class="s5">15</span><span class="s3">, </span><span class="s1">b </span><span class="s3">= </span><span class="s5">5</span><span class="s3">;</span>
+<a name="l92"><span class="ln">92   </span></a>    <span class="s1">Double x </span><span class="s3">= </span><span class="s5">10.0</span><span class="s3">, </span><span class="s1">y </span><span class="s3">= </span><span class="s5">2.0</span><span class="s3">;</span>
+<a name="l93"><span class="ln">93   </span></a>    <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s6">&quot;Разница: &quot; </span><span class="s3">+ <a href="WrapperOperations.java.html">WrapperOperations</a>.</span><span class="s1">sumIntegers</span><span class="s3">(</span><span class="s1">a</span><span class="s3">, </span><span class="s1">b</span><span class="s3">));</span>
+<a name="l94"><span class="ln">94   </span></a>    <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s6">&quot;Деление: &quot; </span><span class="s3">+ <a href="WrapperOperations.java.html">WrapperOperations</a>.</span><span class="s1">multiplyDoubles</span><span class="s3">(</span><span class="s1">x</span><span class="s3">, </span><span class="s1">y</span><span class="s3">));</span>
+<a name="l95"><span class="ln">95   </span></a>    <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s6">&quot;Бинарный вид: &quot; </span><span class="s3">+ <a href="WrapperOperations.java.html">WrapperOperations</a>.</span><span class="s1">convertToBinaryString</span><span class="s3">(</span><span class="s5">42</span><span class="s3">));</span>
+<a name="l96"><span class="ln">96   </span></a>
+<a name="l97"><span class="ln">97   </span></a>    <span class="s4">// Задача 2</span>
+<a name="l98"><span class="ln">98   </span></a>    <a href="Vehicle.java.html">Vehicle</a> <span class="s1">bus </span><span class="s3">= </span><span class="s2">new <a href="Vehicle.java.html">Vehicle</a></span><span class="s3">();</span>
+<a name="l99"><span class="ln">99   </span></a>    <span class="s1">bus</span><span class="s3">.</span><span class="s1">setTransportType</span><span class="s3">(<a href="TransportType.java.html">TransportType</a>.</span><span class="s1">BUS</span><span class="s3">);</span>
+<a name="l100"><span class="ln">100  </span></a>    <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s6">&quot;Автобус общественный? &quot; </span><span class="s3">+ </span><span class="s1">bus</span><span class="s3">.</span><span class="s1">isPublicTransport</span><span class="s3">());</span>
+<a name="l101"><span class="ln">101  </span></a>
+<a name="l102"><span class="ln">102  </span></a>    <span class="s4">// Задача 4</span>
+<a name="l103"><span class="ln">103  </span></a>    <a href="Animal.java.html">Animal</a> <span class="s1">dog </span><span class="s3">= </span><span class="s2">new <a href="Dog.java.html">Dog</a></span><span class="s3">();</span>
+<a name="l104"><span class="ln">104  </span></a>    <span class="s1">dog</span><span class="s3">.</span><span class="s1">makeSound</span><span class="s3">();</span>
+<a name="l105"><span class="ln">105  </span></a>
+<a name="l106"><span class="ln">106  </span></a>    <span class="s4">// Задача 5</span>
+<a name="l107"><span class="ln">107  </span></a>    <a href="Circle.java.html">Circle</a> <span class="s1">circle </span><span class="s3">= </span><span class="s2">new <a href="Circle.java.html">Circle</a></span><span class="s3">(</span><span class="s5">5</span><span class="s3">);</span>
+<a name="l108"><span class="ln">108  </span></a>    <span class="s1">circle</span><span class="s3">.</span><span class="s1">resize</span><span class="s3">(</span><span class="s5">10</span><span class="s3">);</span>
+<a name="l109"><span class="ln">109  </span></a>    <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s6">&quot;Площадь круга: &quot; </span><span class="s3">+ </span><span class="s1">circle</span><span class="s3">.</span><span class="s1">calculateArea</span><span class="s3">());</span>
+<a name="l110"><span class="ln">110  </span></a>
+<a name="l111"><span class="ln">111  </span></a>    <span class="s4">// Задача 6</span>
+<a name="l112"><span class="ln">112  </span></a>    <a href="Logger.java.html">Logger</a> <span class="s1">consoleLogger </span><span class="s3">= </span><span class="s2">new <a href="ConsoleLogger.java.html">ConsoleLogger</a></span><span class="s3">();</span>
+<a name="l113"><span class="ln">113  </span></a>    <span class="s1">consoleLogger</span><span class="s3">.</span><span class="s1">log</span><span class="s3">(</span><span class="s6">&quot;Тестовое сообщение&quot;</span><span class="s3">);</span>
+<a name="l114"><span class="ln">114  </span></a>
+<a name="l115"><span class="ln">115  </span></a>    <span class="s4">// Задача 8</span>
+<a name="l116"><span class="ln">116  </span></a>    <a href="Light.java.html">Light</a> <span class="s1">livingRoomLight </span><span class="s3">= </span><span class="s2">new <a href="Light.java.html">Light</a></span><span class="s3">();</span>
+<a name="l117"><span class="ln">117  </span></a>    <span class="s1">livingRoomLight</span><span class="s3">.</span><span class="s1">turnOn</span><span class="s3">();</span>
+<a name="l118"><span class="ln">118  </span></a>  <span class="s3">}</span>
+<a name="l119"><span class="ln">119  </span></a><span class="s3">}</span>
+<a name="l120"><span class="ln">120  </span></a></pre>
 </body>
 </html>
