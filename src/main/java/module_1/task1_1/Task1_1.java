@@ -27,7 +27,7 @@ public class Task1_1 {
     bird = (bird * 10) / 3.5 + 4;
     System.out.println("Результат задачи 5: " + bird);
 
-    // Задача 6: Вес участников (используется класс WeightData)
+    // Задача 6: Вес участников (используем класс WeightData)
     module_1.task1_1.WeightData.calculateWeights();
 
     // Задача 7: Зарплата сотрудников
